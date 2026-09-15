@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://popodesigner.github.io/telegestione-supervisore-pro-video/sitemap.xml

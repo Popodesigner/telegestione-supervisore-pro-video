@@ -1,0 +1,38 @@
+.scroll-scrub__layer {
+  transition: opacity 720ms ease, transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.simulation-console.scenario-flash {
+  animation: scenario-flash 520ms ease both;
+}
+
+@keyframes scenario-flash {
+  0% {
+    opacity: 0.45;
+    transform: translateY(7px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.standalone-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease, transform 850ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.standalone-ready [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-scrub__layer,
+  .standalone-ready [data-reveal],
+  .simulation-console.scenario-flash {
+    animation: none;
+    transition: none;
+  }
+}
